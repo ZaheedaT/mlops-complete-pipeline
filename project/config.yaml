@@ -1,0 +1,20 @@
+project:
+  name: ${PROJECT_NAME}
+  model_name: ${PROJECT_NAME}
+
+model:
+  type: classification
+  framework: sklearn
+  algorithm: random_forest
+
+training:
+  entrypoint: project.train:train
+
+deployment:
+  namespace: default
+  replicas: 1
+  ecr_repository: ${PROJECT_NAME}
+
+monitoring:
+  workspace: ${PROJECT_NAME}
+  project: ${PROJECT_NAME}

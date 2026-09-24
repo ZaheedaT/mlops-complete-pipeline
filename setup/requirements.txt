@@ -1,0 +1,7 @@
+PyYAML
+python-dotenv
+pyspark
+scikit-learn
+mlflow
+boto3
+evidently
