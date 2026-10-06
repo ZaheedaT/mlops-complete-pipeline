@@ -1,12 +1,12 @@
-from platform.core.project import ProjectConfig
-from platform.core.result import PipelineResult
+from mlops_platform.core.project import ProjectConfig
+from mlops_platform.core.result import PipelineResult
 
-from platform.interfaces.trainer import Trainer
-from platform.interfaces.data_validator import DataValidator
-from platform.interfaces.validator import ModelValidator
-from platform.interfaces.registry import ModelRegistry
-from platform.interfaces.deployer import ModelDeployer
-from platform.interfaces.monitor import ModelMonitor
+from mlops_platform.interfaces.trainer import Trainer
+from mlops_platform.interfaces.data_validator import DataValidator
+from mlops_platform.interfaces.validator import ModelValidator
+from mlops_platform.interfaces.registry import ModelRegistry
+from mlops_platform.interfaces.deployer import ModelDeployer
+from mlops_platform.interfaces.monitor import ModelMonitor
 
 
 class MLOpsPipeline:

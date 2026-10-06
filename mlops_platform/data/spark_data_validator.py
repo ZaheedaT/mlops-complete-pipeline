@@ -3,10 +3,10 @@ from typing import Any, Dict, List
 from pyspark.sql import DataFrame
 from pyspark.sql.types import StructType
 
-from platform.core.exceptions import DataValidationException
-from platform.core.project import ProjectConfig
-from platform.core.result import Result
-from platform.interfaces.data_validator import DataValidator
+from mlops_platform.core.exceptions import DataValidationException
+from mlops_platform.core.project import ProjectConfig
+from mlops_platform.core.result import Result
+from mlops_platform.interfaces.data_validator import DataValidator
 
 
 class SparkDataValidator(DataValidator):

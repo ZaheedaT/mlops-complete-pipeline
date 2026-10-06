@@ -1,9 +1,9 @@
 import subprocess
 
-from platform.core.exceptions import DeploymentException
-from platform.core.project import ProjectConfig
-from platform.core.result import Result
-from platform.interfaces.deployer import ModelDeployer
+from mlops_platform.core.exceptions import DeploymentException
+from mlops_platform.core.project import ProjectConfig
+from mlops_platform.core.result import Result
+from mlops_platform.interfaces.deployer import ModelDeployer
 
 
 class KubernetesModelDeployer(ModelDeployer):
@@ -64,27 +64,27 @@ class KubernetesModelDeployer(ModelDeployer):
     ) -> None:
 
         manifest = f"""
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: {deployment_name}
-  namespace: {project.deployment_namespace}
-spec:
-  replicas: {project.deployment_replicas}
-  selector:
-    matchLabels:
-      app: {deployment_name}
-  template:
-    metadata:
-      labels:
-        app: {deployment_name}
-    spec:
-      containers:
-        - name: model
-          image: {image}
-          ports:
-            - containerPort: 8080
-"""
+                    apiVersion: apps/v1
+                    kind: Deployment
+                    metadata:
+                      name: {deployment_name}
+                      namespace: {project.deployment_namespace}
+                    spec:
+                      replicas: {project.deployment_replicas}
+                      selector:
+                        matchLabels:
+                          app: {deployment_name}
+                      template:
+                        metadata:
+                          labels:
+                            app: {deployment_name}
+                        spec:
+                          containers:
+                            - name: model
+                              image: {image}
+                              ports:
+                                - containerPort: 8080
+                    """
 
         process = subprocess.run(
             [

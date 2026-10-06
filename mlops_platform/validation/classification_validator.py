@@ -7,9 +7,9 @@ from sklearn.metrics import (
     recall_score,
 )
 
-from platform.core.exceptions import ValidationException
-from platform.core.project import ProjectConfig
-from platform.core.result import Result
+from mlops_platform.core.exceptions import ValidationException
+from mlops_platform.core.project import ProjectConfig
+from mlops_platform.core.result import Result
 
 
 class ClassificationValidator:

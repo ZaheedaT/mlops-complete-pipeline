@@ -1,10 +1,8 @@
 import subprocess
-
 import boto3
-
-from platform.core.exceptions import ContainerRegistryException
-from platform.core.project import ProjectConfig
-from platform.core.result import Result
+from mlops_platform.core.exceptions import ContainerRegistryException
+from mlops_platform.core.project import ProjectConfig
+from mlops_platform.core.result import Result
 
 
 class ECRContainerRegistry:
@@ -17,25 +15,16 @@ class ECRContainerRegistry:
         region: str,
     ):
         self.region = region
+        self.ecr = boto3.client("ecr", region_name=region,)
 
-        self.ecr = boto3.client(
-            "ecr",
-            region_name=region,
-        )
-
-    def push(
-        self,
-        project: ProjectConfig,
-        image: str,
-    ) -> Result:
+    def push(self,project: ProjectConfig,image: str,) -> Result:
 
         try:
             repository = project.ecr_repository
 
             if not repository:
                 raise ContainerRegistryException(
-                    "ECR repository has not been configured."
-                )
+                    "ECR repository has not been configured.")
 
             account_id = self.ecr.get_caller_identity()
             del account_id

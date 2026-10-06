@@ -1,29 +1,29 @@
 from pathlib import Path
 
-from platform.config.loader import ConfigLoader
-from platform.core.project import ProjectConfig
+from mlops_platform.config.loader import ConfigLoader
+from mlops_platform.core.project import ProjectConfig
 
-from platform.data.spark_data_validator import (
+from mlops_platform.data.spark_data_validator import (
     SparkDataValidator,
 )
 
-from platform.training.model_trainer import (
+from mlops_platform.training.model_trainer import (
     ModelTrainer,
 )
 
-from platform.validation.model_validator import (
+from mlops_platform.validation.model_validator import (
     ModelValidationEngine,
 )
 
-from platform.registry.model_registry import (
+from mlops_platform.registry.model_registry import (
     MLflowModelRegistry,
 )
 
-from platform.deployment.model_deployer import (
+from mlops_platform.deployment.model_deployer import (
     KubernetesModelDeployer,
 )
 
-from platform.pipeline.pipeline import (
+from mlops_platform.pipeline.pipeline import (
     MLOpsPipeline,
 )
 

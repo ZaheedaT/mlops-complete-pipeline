@@ -1,10 +1,10 @@
 from typing import Any
 
-from platform.core.exceptions import TrainingException
-from platform.core.project import ProjectConfig
-from platform.core.result import Result
-from platform.interfaces.trainer import Trainer
-from platform.training.model_factory import ModelFactorySelector
+from mlops_platform.core.exceptions import TrainingException
+from mlops_platform.core.project import ProjectConfig
+from mlops_platform.core.result import Result
+from mlops_platform.interfaces.trainer import Trainer
+from mlops_platform.training.model_factory import ModelFactorySelector
 
 
 class ModelTrainer(Trainer):

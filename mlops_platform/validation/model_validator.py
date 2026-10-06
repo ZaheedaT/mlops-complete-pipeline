@@ -1,13 +1,13 @@
 from typing import Any
 
-from platform.core.exceptions import ValidationException
-from platform.core.project import ProjectConfig
-from platform.core.result import Result
-from platform.interfaces.validator import ModelValidator
-from platform.validation.classification_validator import (
+from mlops_platform.core.exceptions import ValidationException
+from mlops_platform.core.project import ProjectConfig
+from mlops_platform.core.result import Result
+from mlops_platform.interfaces.validator import ModelValidator
+from mlops_platform.validation.classification_validator import (
     ClassificationValidator,
 )
-from platform.validation.regression_validator import (
+from mlops_platform.validation.regression_validator import (
     RegressionValidator,
 )
 

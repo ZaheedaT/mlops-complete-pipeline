@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 from typing import Any
 
-from platform.core.exceptions import TrainingException
-from platform.core.project import ProjectConfig
+from mlops_platform.core.exceptions import TrainingException
+from mlops_platform.core.project import ProjectConfig
 
 
 class ModelFactory(ABC):

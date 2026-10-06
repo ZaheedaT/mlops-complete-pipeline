@@ -3,10 +3,10 @@ from typing import Any
 import mlflow
 from mlflow import MlflowClient
 
-from platform.core.exceptions import RegistrationException
-from platform.core.project import ProjectConfig
-from platform.core.result import Result
-from platform.interfaces.registry import ModelRegistry
+from mlops_platform.core.exceptions import RegistrationException
+from mlops_platform.core.project import ProjectConfig
+from mlops_platform.core.result import Result
+from mlops_platform.interfaces.registry import ModelRegistry
 
 
 class MLflowModelRegistry(ModelRegistry):

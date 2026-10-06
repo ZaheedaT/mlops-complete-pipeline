@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 from typing import Any
 
-from platform.core.project import ProjectConfig
-from platform.core.result import Result
+from mlops_platform.core.project import ProjectConfig
+from mlops_platform.core.result import Result
 
 
 class ModelRegistry(ABC):
